@@ -8,29 +8,40 @@
     <title>jaeyeonhong</title>  
 </head>
 <body>
-    <form id="login-form" class="hidden">
-        <!-- js에서 유효성 검사하는 것을 html에서 할 수 있는데, 조건은 form 태그 안 input 태그 -->
-        <!-- 새로 고침 되는 이유 : form이 자동적으로 submit 하기 때문이다. -->
-        <input type="text" required maxlength="15" placeholder="What's your name?"/>
-        <input type="submit" value="Login"/> 
-    </form>
-    <h2 id="clock">00:00:00</h2>
-    <h1 id="greeting" class="hidden"></h1>
-    <div id="quote">
-        <span></span>
-        <span></span>
+    <div class="container">
+        <div class="left">
+            <form id="login-form" class="logform hidden">
+                <!-- js에서 유효성 검사하는 것을 html에서 할 수 있는데, 조건은 form 태그 안 input 태그 -->
+                <!-- 새로 고침 되는 이유 : form이 자동적으로 submit 하기 때문이다. -->
+                <div class="landing">Name?</div>
+                <input type="text" required maxlength="10" size="6" placeholder="I'm"/>
+            </form>
+            <span id="greeting" class="landing hidden"></span>
+            <div class="null"></div>
+            <div id="quote">
+                <span class="writing"></span>
+                <br><span class="person">-</span>
+                <span class="person"></span>
+            </div>
+            <div class="null"></div>
+            <div class="null"></div>
+            <span class="title">Now time:</span><br>
+            <span id="clock" class="content">00:00:00</span><br>
+            <span class="title">Now weather in your city:</span>
+            <div id="weather" class="content">
+                <span></span>
+                <span>in</span>
+                <span></span>
+            </div>
+        </div>
+        <div class="right">
+            <span class="title">Todo</span>
+            <form id="todo-form">
+                <input type="text" placeholder="Enter todo!" required/>
+            </form>
+            <ul id="todo-list"></ul>
+        </div>
     </div>
-
-    <form id="todo-form">
-        <input type="text" placeholder="Enter todo!" required/>
-    </form>
-    <ul id="todo-list"></ul>
-
-    <div id="weather">
-        <span></span>
-        <span></span>
-    </div>
-    
     <script src="js/greetings.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>

@@ -23,7 +23,7 @@ function onLoginSubmit(event){
 
 function paintGreeting(username){
     greeting.classList.remove(HIDDEN_CLASSNAME);
-    greeting.innerText = `Hello ${username} !`; // === "Hello" + username, js의 변수를 html에 사용할 때
+    greeting.innerText = `Hello \n ${username}`; // === "Hello" + username, js의 변수를 html에 사용할 때
 }
 
 const savedUserName = localStorage.getItem(USERNAME_KEY);

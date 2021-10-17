@@ -4,8 +4,8 @@ function onGeoOk(position){
     const API_KEY = "bdc7c65e76aba21cba5f57312fee5fcf";
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
 
-    const cityName = document.querySelector("#weather span:first-child");
-    const weather = document.querySelector("#weather span:last-child");
+    const cityName = document.querySelector("#weather span:last-child");
+    const weather = document.querySelector("#weather span:first-child");
 
     // fetch는 js가 url로 연결하는 함수.
     // server가 준비되는데 시간이 걸리므로 '준비되면'이라는 then 함수 사용. 
